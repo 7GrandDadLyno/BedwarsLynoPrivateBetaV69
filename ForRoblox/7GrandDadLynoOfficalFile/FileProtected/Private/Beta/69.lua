@@ -5,6 +5,12 @@ Notification:Notify(
     {OutlineColor = Color3.fromRGB(80, 80, 80),Time = 5, Type = "option"},
     {Image = "http://www.roblox.com/asset/?id=6023426923", ImageColor = Color3.fromRGB(255, 84, 84), Callback = function(State) print(tostring(State)) end}
 )
+game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 23
+Notification:Notify(
+    {Title = "Notification", Description = "Walk Speed Now are 23 - Dis AntiCheat For More Speed !"},
+    {OutlineColor = Color3.fromRGB(80, 80, 80),Time = 5, Type = "option"},
+    {Image = "http://www.roblox.com/asset/?id=6023426923", ImageColor = Color3.fromRGB(255, 84, 84), Callback = function(State) print(tostring(State)) end}
+)
 local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
 local Window = Library.CreateLib("Lyno Bedwars v69", "LightTheme")
 local Tab = Window:NewTab("Combat")
@@ -18,6 +24,7 @@ SectionCombat:NewButton("Infinite Jump", "ButtonInfo", function()
         end
     end)
 end)
+
 SectionCombat:NewButton("KillAura", "Others Deal You 100% DAM = Deal Others +25% , always +25% In your health", function()
     loadstring(game:HttpGet("https://raw.githubusercontent.com/OminousVibes-Exploit/Scripts/main/doors/main.lua"))()
 end)
@@ -39,6 +46,9 @@ SectionRender:NewButton("AntiCheatByPass", "AC Dis", function()
     utils.DisableAC()
     task.wait(1)
     utils.ExecuteBH()
+end)
+SectionRender:NewButton("WalkSpeed 50", "Make Sure Dis AntiCheat First !", function()
+    game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 50
 end)
 local Section = Tab:NewSection("World")
 SectionWorld:NewButton("FOV CHANGER , 150", "Moon Private", function()
